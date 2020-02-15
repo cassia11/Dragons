@@ -11,7 +11,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 function App() {
   return <div>
     <Navbar className="App-navbar" expand="lg">
-      <Navbar.Brand href="#home">
+      <Navbar.Brand href="/">
         <img
           src="dragon.png"
           width="30"

@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import HomePage from '../HomePage';
+import HomePage from '../home/HomePage';
 import ListPage from '../dragons/ListPage';
 import { Switch, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';

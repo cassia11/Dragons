@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import HomePage from '../dragons/HomePage';
+import HomePage from '../HomePage';
 import ListPage from '../dragons/ListPage';
 import { Switch, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,7 +9,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 
 function App() {
-  return (
+  return <div>
     <Navbar className="App-navbar" expand="lg">
       <Navbar.Brand href="#home">
         <img
@@ -25,14 +25,14 @@ function App() {
         <Nav className="mr-auto">
           <Nav.Link bg="light" href="/">Página inicial</Nav.Link>
           <Nav.Link bg="light" href="/dragons">Lista de dragões</Nav.Link>
-          <Switch>
-            <Route exact path='/' component={HomePage} />
-            <Route exact path='/dragons' component={ListPage} />
-          </Switch>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  );
+    <Switch>
+      <Route exact path='/' component={HomePage} />
+      <Route exact path='/dragons' component={ListPage} />
+    </Switch>
+  </div>
 }
 
 

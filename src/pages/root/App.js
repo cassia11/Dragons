@@ -2,12 +2,9 @@ import './App.css';
 import React from 'react';
 import HomePage from '../home/HomePage';
 import ListPage from '../dragons/ListPage';
-import DetailsPage from '../dragons/DetailsPage'
 import { Switch, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav } from 'react-bootstrap';
-
-
 
 function App() {
   return <div>
@@ -25,18 +22,15 @@ function App() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link bg="light" href="/">Página inicial</Nav.Link>
-          <Nav.Link bg="light" href="/api/v1/dragon">Lista de dragões</Nav.Link>
-          <Nav.Link bg="light" href="/api/v1/dragon/:id">Detalhes de um dragão</Nav.Link>
+          <Nav.Link bg="light" href="/dragons">Lista de dragões</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
     <Switch>
       <Route exact path='/' component={HomePage} />
-      <Route exact path='/api/v1/dragon' component={ListPage} />
-      <Route exact path='/api/v1/dragon/:id' component={DetailsPage} />
+      <Route exact path='/dragons' component={ListPage} />
     </Switch>
   </div>
 }
-
 
 export default App;

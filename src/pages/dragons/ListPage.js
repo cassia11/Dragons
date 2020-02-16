@@ -1,13 +1,32 @@
-import React from 'react'
-import CardDragons from '../../components/CardDragons'
+import axios from '../../configs/api';
+import React, { Component } from 'react';
+import CardDragons from '../../components/CardDragons';
 
-class ListPage extends React.Component {
+const arraySort = require('array-sort');
+
+export default class ListPage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isLoading: true,
+      dragons: []
+    };
+  }
+
+  componentDidMount() {
+    axios.get()
+      .then(res => {
+        const dragons = arraySort(res.data, 'name');
+        this.setState({ dragons: dragons });
+        this.setState({ isLoading: false });
+      })
+  }
 
   render() {
     return (
-    <CardDragons></CardDragons>
-    );
+      this.state.dragons.map((dragon, key) => <CardDragons dragon={dragon} key={key} />)
+    )
   }
-}
 
-export default ListPage
+}

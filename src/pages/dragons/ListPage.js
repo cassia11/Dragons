@@ -1,15 +1,13 @@
 import React from 'react'
+import CardDragons from '../../components/CardDragons'
 
 class ListPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Voce esta no ListPage</h1>
-      </div>
+    <CardDragons></CardDragons>
     );
   }
-
 }
 
 export default ListPage

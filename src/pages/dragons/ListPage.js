@@ -1,5 +1,5 @@
 import React from 'react'
-import CardDragons from '../../components/CardDragons'
+import CardDragons from '../../components/CardList'
 
 class ListPage extends React.Component {
 

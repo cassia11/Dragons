@@ -18,7 +18,7 @@ export default class ListPage extends Component {
   componentDidMount() {
     axios.get()
       .then(res => {
-        const dragons = arraySort(res.data, 'name');
+        const dragons = arraySort(res.data, ['name', 'id']);
         this.setState({ dragons: dragons });
         this.setState({ isLoading: false });
       })

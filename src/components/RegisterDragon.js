@@ -12,7 +12,7 @@ const RegisterDragon = () => (
             <Form.Label>Type:</Form.Label>
             <Form.Control type="type" placeholder="Enter type" />
         </Form.Group>
-        <Button variant="dark">Submit</Button>
+        <Button variant="outline-danger">Submit</Button>
     </Form>
 );
 export default RegisterDragon

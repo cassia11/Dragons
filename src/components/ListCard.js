@@ -1,8 +1,6 @@
 import React from 'react'
-import axios from '../configs/api';
+import axios from '../configs/api'
 import { Card, Button } from 'react-bootstrap'
-import { BrowserRouter, Route } from 'react-router-dom'
-import DetailsPage from '../pages/dragons/DetailsPage';
 
 const handleDelete = (idDragon) => {
     try {
@@ -17,19 +15,13 @@ const handleDelete = (idDragon) => {
 
 const ListCard = ({ dragon }, key) => (
     <div>
-        <Card border="dark" bg="dark" text="white" style={{ width: '18rem', margin: '30px' }}>
+        <Card border="dark" style={{ width: '18rem', margin: '30px' }} className="justify-content-between">
+        <Card.Header>Info Dragão:</Card.Header>
             <Card.Body>
                 <Card.Title bg="light">{dragon.name}</Card.Title>
                 <Button variant="danger" onClick={() => handleDelete(dragon.id)} >Remover</Button>
-                <Button variant="primary" type="button" onClick={() => (
-                    <BrowserRouter>
-                        <Route path='/' component={DetailsPage} />
-                    </BrowserRouter>
-                )
-                }>
-                    {dragon.id}
-                </Button>
-                <Card.Link to={`/${dragon.id}`} >Editar</Card.Link>
+                
+                <Card.Link href={`/dragons/${dragon.id}`} ><Button variant="primary">Editar</Button></Card.Link>
             </Card.Body>
             <Card.Footer className="text-muted">{dragon.createdAt}</Card.Footer>
         </Card>

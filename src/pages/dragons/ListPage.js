@@ -1,6 +1,6 @@
-import axios from '../../configs/api';
-import React, { Component } from 'react';
-import CardDragons from '../../components/ListCard';
+import axios from '../../configs/api'
+import React, { Component } from 'react'
+import CardDragons from '../../components/ListCard'
 
 const arraySort = require('array-sort');
 

@@ -1,13 +1,14 @@
 import React from 'react'
-import { Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap'
 
 const DetailsCard = ({ dragon }, key) => (
     <div>
-        <Card style={{ width: '18rem', margin: '30px' }}>
+        <h1>Altere os dados do Dragão</h1>
+        <Card style={{ width: '50%', margin: '30px' }}>
             <Card.Body>
-                <Card.Title>{dragon.name}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">{dragon.createdAt}</Card.Subtitle>
-                <Card.Text> {dragon.type} </Card.Text>
+                <Card.Title>nome: {dragon.name}</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">Tipo: {dragon.type}</Card.Subtitle>
+                <Card.Text>Criado em: {dragon.createdAt}</Card.Text>
             </Card.Body>
         </Card>
     </div>

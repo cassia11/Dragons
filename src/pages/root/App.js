@@ -5,7 +5,8 @@ import ListPage from '../dragons/ListPage';
 import RegisterPage from '../register/RegisterPage'
 import { Switch, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Button, Form } from 'react-bootstrap';
+import Login from '../../components/Login';
 
 function App() {
   return <div>
@@ -27,11 +28,16 @@ function App() {
           <Nav.Link bg="light" href="/dragons/register">Cadastrar um dragão</Nav.Link>
         </Nav>
       </Navbar.Collapse>
+      <Form inline>
+        <Button variant="outline-danger" href="/login" type="submit">Login</Button>
+      </Form>
+
     </Navbar>
     <Switch>
       <Route exact path='/' component={HomePage} />
       <Route exact path='/dragons' component={ListPage} />
       <Route exact path='/dragons/register' component={RegisterPage} />
+      <Route exact path='/login' component={Login} />
     </Switch>
   </div>
 }

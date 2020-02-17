@@ -1,21 +1,32 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
-import DetailsCard from './DetailsCard'
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import axios from '../configs/api';
+import { Card, Button } from 'react-bootstrap'
+import { Route } from 'react-router-dom'
+import DetailsPage from '../pages/dragons/DetailsPage';
 
+const handleDelete = (idDragon) => {
+    console.log(idDragon);
+    axios.delete(`/${idDragon}`)
+        .then(res => {
+            console.log(res);
+            console.log(res.data);
+            window.location.reload();
+        })
+}
 
 const ListCard = ({ dragon }, key) => (
     <div>
-        <Card style={{ width: '18rem', margin: '30px' }}>
+        <Card border="dark" bg="dark" text="white" style={{ width: '18rem', margin: '30px' }}>
             <Card.Body>
                 <Card.Title bg="light">{dragon.name}</Card.Title>
-                <Card.Link bg="light" href="#">Remover</Card.Link>
-                <Card.Link bg="light" href="/dragons/{ dragon.id }">Editar</Card.Link>
+                <Button variant="danger" onClick={() => handleDelete(dragon.id)} >Remover</Button>
+                <Card.Link path={`/dragons/${dragon.id}`} >
+                    <Button variant="primary" >Editar</Button>
+                </Card.Link>
             </Card.Body>
+            <Card.Footer className="text-muted">{dragon.createdAt}</Card.Footer>
         </Card>
-        <Router>
-            <Route path="/dragons/:id" component={ DetailsCard } />
-        </Router>
+        <Route path='/dragons/:id' component={ DetailsPage } ></Route>
     </div>
 );
 

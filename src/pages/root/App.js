@@ -11,7 +11,7 @@ function App() {
     <Navbar className="App-navbar" expand="lg">
       <Navbar.Brand href="/">
         <img
-          src="dragon.png"
+          src="/dragon.png"
           width="30"
           height="30"
           className="d-inline-block align-top"

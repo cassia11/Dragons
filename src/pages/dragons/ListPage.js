@@ -10,7 +10,8 @@ export default class ListPage extends Component {
 
     this.state = {
       isLoading: true,
-      dragons: []
+      dragons: [],
+      id: ''
     };
   }
 
@@ -24,9 +25,9 @@ export default class ListPage extends Component {
   }
 
   render() {
-    return (
-      this.state.dragons.map((dragon, key) => <CardDragons dragon={dragon} key={key} />)
-    )
+    const dragonList = (this.state.dragons.map((dragon, key) => <CardDragons dragon={dragon} key={key} />));
+    const loadingMessage = <h1 className="d-flex m-auto">Loading...</h1>;
+    return (this.state.isLoading ? loadingMessage : dragonList);
   }
 
 }

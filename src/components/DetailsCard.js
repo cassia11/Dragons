@@ -50,7 +50,7 @@ const DetailsCard = ({ dragon }, key) => (
                 </Col>
             </Form.Row>
             <Form.Row>
-                <Col><Button type="button" onClick={(event) => handleSubmit(dragon.id)}>Atualizar</Button></Col>
+                <Col><Button style={{ margin: '20px', backgroundColor: 'pink', borderColor: 'pink' }} type="button" onClick={(event) => handleSubmit(dragon.id)}>Atualizar</Button></Col>
             </Form.Row>
         </Form>
     </div>

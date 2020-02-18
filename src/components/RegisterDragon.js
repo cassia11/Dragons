@@ -17,14 +17,18 @@ const RegisterDragon = () => (
 
     <Form>
         <Form.Group controlId="formBasicName">
-            <Form.Label>Name:</Form.Label>
+            <Form.Label>Nome:</Form.Label>
             <Form.Control type="name" placeholder="Enter name" />
         </Form.Group>
         <Form.Group controlId="formBasicType">
-            <Form.Label>Type:</Form.Label>
-            <Form.Control type="type" placeholder="Enter type" />
+            <Form.Label>Tipo:</Form.Label>
+            <Form.Control type="text" placeholder="Enter type" />
         </Form.Group>
-        <Button variant="outline-success" onClick={() => handlePost()} >Submit</Button>
+        <Form.Group controlId="formBasicDate">
+            <Form.Label>Data de criação:</Form.Label>
+            <Form.Control type="text" placeholder="Enter date" />
+        </Form.Group>
+        <Button variant="outline-success" onClick={() => handlePost()} >Salvar</Button>
     </Form>
 );
 export default RegisterDragon

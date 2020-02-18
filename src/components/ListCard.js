@@ -14,7 +14,6 @@ const handleDelete = (idDragon) => {
 }
 
 const ListCard = ({ dragon }, key) => (
-    <div>
         <Card border="dark" style={{ width: '18rem', margin: '30px' }} className="justify-content-between">
             <Card.Header style={{ textAlign: 'center ' }}>Informações do dragão:</Card.Header>
             <Card.Body style={{ textAlign: 'center ' }} >
@@ -23,7 +22,6 @@ const ListCard = ({ dragon }, key) => (
                 <Card.Link href={`/dragons/${dragon.id}`}><Button variant="primary">Editar</Button></Card.Link>
             </Card.Body>
         </Card>
-    </div>
 );
 
 export default ListCard

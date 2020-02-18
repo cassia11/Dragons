@@ -3,9 +3,9 @@ import { Card, Form, Col } from 'react-bootstrap'
 
 const DetailsCard = ({ dragon }, key) => (
     <div>
-        <h1>Altere os dados do Dragão</h1>
+        <h1 style={{ fontSize: '30px', paddingTop: '10px', textAlign: 'center' }}>Altere os dados do Dragão</h1>
         <Form>
-            <Form.Row>
+            <Form.Row style={{ paddingTop: '16px', padding: '20px' }}>
                 <Col>
                     <Form.Label>Nome:</Form.Label>
                     <Form.Control />
@@ -20,11 +20,12 @@ const DetailsCard = ({ dragon }, key) => (
                 </Col>
             </Form.Row>
         </Form>
-        <Card style={{ width: '50%', margin: '30px' }}>
-            <Card.Body>
-                <Card.Title>nome: {dragon.name}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">Tipo: {dragon.type}</Card.Subtitle>
-                <Card.Text>Criado em: {dragon.createdAt}</Card.Text>
+        <Card border="dark" style={{ width: '25rem', margin: '30px' }} className="justify-content-between">
+            <Card.Header style={{ textAlign: 'center ', fontSize: '20px' }}>Informações do dragão:</Card.Header>
+            <Card.Body >
+                <Card.Title bg="light" style={{ fontSize: '18px' }}>Nome: {dragon.name}</Card.Title>
+                <Card.Subtitle bg="light" style={{ fontSize: '18px' }}>Tipo: {dragon.type}</Card.Subtitle>
+                <Card.Text bg="light" style={{ fontSize: '18px' }}>Data de criação: {dragon.createdAt}</Card.Text>
             </Card.Body>
         </Card>
     </div>

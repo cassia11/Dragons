@@ -15,7 +15,7 @@ const DetailsCard = ({ dragon }, key) => (
                     <Form.Control />
                 </Col>
                 <Col>
-                    <Form.Label>Data de Criação:</Form.Label>
+                    <Form.Label>Data de criação:</Form.Label>
                     <Form.Control />
                 </Col>
             </Form.Row>

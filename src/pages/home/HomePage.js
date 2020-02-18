@@ -3,8 +3,7 @@ import Image from 'react-bootstrap/Image'
 import './HomePage.css';
 
 
-class Home extends React.Component {
-
+export default class Home extends React.Component {
   render() {
     return (
       <div className="HomePage-div">
@@ -13,6 +12,3 @@ class Home extends React.Component {
     );
   }
 }
-
-
-export default Home

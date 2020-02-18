@@ -1,48 +1,48 @@
 import React from 'react'
+import './css/DetailsCard.scss'
 import axios from '../configs/api'
 import { Form, Col, Button } from 'react-bootstrap'
 
-const form = {
+const data = {
     name: '',
     type: ''
 };
 
-const handleSubmit = (idDragon) => {
+const handleSubmit = (idDragon, event) => {
+    fillField()
     try {
-        axios.put(`/${idDragon}`, { form })
+        axios.put(`/${idDragon}`, data)
             .then(res => {
-                console.log(res)
+
             })
     } catch (err) {
-        console.log(`😱 Axios request failed: ${err}`);
+        console.log(`😱 Axios request failed: ${err}`)
     }
 }
 
-const handleChange = (event) => {
-    const name = event.target.name
-    const value = event.target.value
-
-    if (name === 'name') form.name = value
-    else form.type = value
-    console.log(form)
+const fillField = () => {
+    const name = document.getElementById("name-dragon").value;
+    const type = document.getElementById("type-dragon").value;
+    data.name = name
+    data.type = type
+    console.log(name);
+    console.log(type);
 }
 
-const handleField = ({ dragon }) => {
-    const name = dragon.name
-}
+
 
 const DetailsCard = ({ dragon }, key) => (
     <div>
-        <h1 style={{ fontSize: '30px', paddingTop: '10px', textAlign: 'center' }}>Altere os dados do Dragão</h1>
+        <h1 className="title">Altere os dados do Dragão</h1>
         <Form>
-            <Form.Row style={{ paddingTop: '16px', padding: '20px' }}>
-                <Col>
+            <Form.Row className="form-row">
+                <Col >
                     <Form.Label>Nome:</Form.Label>
-                    <Form.Control defaultValue={dragon.name} name="name" onChange={(event) => handleChange(event)} />
+                    <Form.Control id="name-dragon" defaultValue={dragon.name} name="name" required />
                 </Col>
                 <Col>
                     <Form.Label>Tipo:</Form.Label>
-                    <Form.Control defaultValue={dragon.type} name="type" onChange={(event) => handleChange(event)} />
+                    <Form.Control id="type-dragon" defaultValue={dragon.type} name="type" required />
                 </Col>
                 <Col>
                     <Form.Label>Data de Criação:</Form.Label>
@@ -50,7 +50,12 @@ const DetailsCard = ({ dragon }, key) => (
                 </Col>
             </Form.Row>
             <Form.Row>
-                <Col><Button style={{ margin: '20px', backgroundColor: 'pink', borderColor: 'pink' }} type="button" onClick={(event) => handleSubmit(dragon.id)}>Atualizar</Button></Col>
+                <Col className="align-buttons">
+                    <Button className="button-pink" type="button" onClick={(event) => handleSubmit(dragon.id, event)}>Atualizar</Button>
+                    <a href="/dragons">
+                        <Button className="button-pink" type="button">Voltar </Button>
+                    </a>
+                </Col>
             </Form.Row>
         </Form>
     </div>

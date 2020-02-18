@@ -1,7 +1,7 @@
 import axios from '../../configs/api'
 import React, { Component } from 'react'
+import Loading from '../../components/Loading'
 import DetailsCard from '../../components/DetailsCard'
-import Loading from '../../components/Loading';
 
 export default class DetailsPage extends Component {
     constructor(props) {

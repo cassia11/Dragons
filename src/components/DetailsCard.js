@@ -34,9 +34,9 @@ const handleField = ({ dragon }) => {
 
 const DetailsCard = ({ dragon }, key) => (
     <div>
-        <h1>Altere os dados do Dragão</h1>
+        <h1 style={{ fontSize: '30px', paddingTop: '10px', textAlign: 'center' }}>Altere os dados do Dragão</h1>
         <Form onSubmit={(event) => handleSubmit(event, dragon.id)}>
-            <Form.Row>
+            <Form.Row style={{ paddingTop: '16px', padding: '20px' }}>
                 <Col>
                     <Form.Label>Nome:</Form.Label>
                     <Form.Control defaultValue={dragon.name} name="name" onChange={(event) => handleChange(event)} />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Form, Col } from 'react-bootstrap'
+import { Card, Form, Col, Button } from 'react-bootstrap'
 
 const DetailsCard = ({ dragon }, key) => (
     <div>
@@ -19,6 +19,7 @@ const DetailsCard = ({ dragon }, key) => (
                     <Form.Control />
                 </Col>
             </Form.Row>
+            <Button style={{marginLeft: '20px'}} variant="outline-success">Salvar</Button>
         </Form>
         <Card border="dark" style={{ width: '25rem', margin: '30px' }} className="justify-content-between">
             <Card.Header style={{ textAlign: 'center ', fontSize: '20px' }}>Informações do dragão:</Card.Header>

@@ -3,16 +3,16 @@ import { Form, Button } from 'react-bootstrap';
 
 const Login = () => (
 
-    <Form>
+    <Form style={{ paddingTop: '16px', padding: '20px' }}>
         <Form.Group controlId="formBasicUsername">
-            <Form.Label>Username:</Form.Label>
+            <Form.Label>Nome de usuário:</Form.Label>
             <Form.Control type="username" placeholder="Enter username" />
         </Form.Group>
         <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password:</Form.Label>
+            <Form.Label>Senha:</Form.Label>
             <Form.Control type="password" placeholder="Enter password" />
         </Form.Group>
-        <Button variant="outline-danger">Submit</Button>
+        <Button variant="outline-success">Salvar</Button>
     </Form>
 );
 export default Login

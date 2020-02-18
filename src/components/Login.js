@@ -12,7 +12,7 @@ const Login = () => (
             <Form.Label>Senha:</Form.Label>
             <Form.Control type="password" placeholder="Enter password" />
         </Form.Group>
-        <Button variant="outline-success">Salvar</Button>
+        <Button style={{  backgroundColor: 'pink', borderColor: 'pink' }}>Salvar</Button>
     </Form>
 );
 export default Login

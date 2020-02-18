@@ -1,6 +1,7 @@
 import axios from '../../configs/api'
 import React, { Component } from 'react'
 import DetailsCard from '../../components/DetailsCard'
+import Loading from '../../components/Loading';
 
 export default class DetailsPage extends Component {
     constructor(props) {
@@ -22,8 +23,8 @@ export default class DetailsPage extends Component {
     }
 
     render() {
-        const dragonDetails = (<DetailsCard dragon={this.state.dragon} />);
-        const loadingMessage = <h1 className="d-flex m-auto">Loading...</h1>;
+        const dragonDetails = <DetailsCard dragon={this.state.dragon} />;
+        const loadingMessage = <Loading color='pink' type='spin'/>;
         return (this.state.isLoading ? loadingMessage : dragonDetails);
     }
 }

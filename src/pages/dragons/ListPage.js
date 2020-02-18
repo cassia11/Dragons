@@ -1,6 +1,7 @@
 import axios from '../../configs/api'
 import React, { Component } from 'react'
 import CardDragons from '../../components/ListCard'
+import Loading from '../../components/Loading';
 
 const arraySort = require('array-sort');
 
@@ -26,7 +27,7 @@ export default class ListPage extends Component {
 
   render() {
     const dragonList = (this.state.dragons.map((dragon, key) => <CardDragons dragon={dragon} key={key} />));
-    const loadingMessage = <h1 className="d-flex m-auto">Loading...</h1>;
+    const loadingMessage = <Loading color='pink' type='spin'/>;
     return (this.state.isLoading ? loadingMessage : dragonList);
   }
 

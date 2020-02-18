@@ -1,9 +1,25 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, Form, Col } from 'react-bootstrap'
 
 const DetailsCard = ({ dragon }, key) => (
     <div>
         <h1>Altere os dados do Dragão</h1>
+        <Form>
+            <Form.Row>
+                <Col>
+                    <Form.Label>Nome:</Form.Label>
+                    <Form.Control />
+                </Col>
+                <Col>
+                    <Form.Label>Tipo:</Form.Label>
+                    <Form.Control />
+                </Col>
+                <Col>
+                    <Form.Label>Data de Criação:</Form.Label>
+                    <Form.Control />
+                </Col>
+            </Form.Row>
+        </Form>
         <Card style={{ width: '50%', margin: '30px' }}>
             <Card.Body>
                 <Card.Title>nome: {dragon.name}</Card.Title>

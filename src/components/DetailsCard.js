@@ -7,8 +7,7 @@ const form = {
     type: ''
 };
 
-const handleSubmit = (event, idDragon) => {
-    console.log(event)
+const handleSubmit = (idDragon) => {
     try {
         axios.put(`/${idDragon}`, { form })
             .then(res => {
@@ -35,7 +34,7 @@ const handleField = ({ dragon }) => {
 const DetailsCard = ({ dragon }, key) => (
     <div>
         <h1 style={{ fontSize: '30px', paddingTop: '10px', textAlign: 'center' }}>Altere os dados do Dragão</h1>
-        <Form onSubmit={(event) => handleSubmit(event, dragon.id)}>
+        <Form>
             <Form.Row style={{ paddingTop: '16px', padding: '20px' }}>
                 <Col>
                     <Form.Label>Nome:</Form.Label>
@@ -51,7 +50,7 @@ const DetailsCard = ({ dragon }, key) => (
                 </Col>
             </Form.Row>
             <Form.Row>
-                <Col><Button type="submit">Atualizar</Button></Col>
+                <Col><Button type="button" onClick={(event) => handleSubmit(dragon.id)}>Atualizar</Button></Col>
             </Form.Row>
         </Form>
     </div>

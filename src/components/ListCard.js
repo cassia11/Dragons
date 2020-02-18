@@ -16,14 +16,12 @@ const handleDelete = (idDragon) => {
 const ListCard = ({ dragon }, key) => (
     <div>
         <Card border="dark" style={{ width: '18rem', margin: '30px' }} className="justify-content-between">
-        <Card.Header>Info Dragão:</Card.Header>
-            <Card.Body>
-                <Card.Title bg="light">{dragon.name}</Card.Title>
-                <Button variant="danger" onClick={() => handleDelete(dragon.id)} >Remover</Button>
-                
-                <Card.Link href={`/dragons/${dragon.id}`} ><Button variant="primary">Editar</Button></Card.Link>
+            <Card.Header style={{ textAlign: 'center ' }}>Informações do dragão:</Card.Header>
+            <Card.Body style={{ textAlign: 'center ' }} >
+                <Card.Title bg="light">Nome: {dragon.name}</Card.Title>
+                <Button style={{ marginRight: '15px' }} variant="danger" onClick={() => handleDelete(dragon.id)} >Remover</Button>
+                <Card.Link href={`/dragons/${dragon.id}`}><Button variant="primary">Editar</Button></Card.Link>
             </Card.Body>
-            <Card.Footer className="text-muted">{dragon.createdAt}</Card.Footer>
         </Card>
     </div>
 );

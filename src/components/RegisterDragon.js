@@ -18,17 +18,13 @@ const RegisterDragon = () => (
     <Form>
         <Form.Group controlId="formBasicName">
             <Form.Label>Nome:</Form.Label>
-            <Form.Control type="name" placeholder="Enter name" />
+            <Form.Control type="name" />
         </Form.Group>
         <Form.Group controlId="formBasicType">
             <Form.Label>Tipo:</Form.Label>
-            <Form.Control type="text" placeholder="Enter type" />
+            <Form.Control type="text" />
         </Form.Group>
-        <Form.Group controlId="formBasicDate">
-            <Form.Label>Data de criação:</Form.Label>
-            <Form.Control type="text" placeholder="Enter date" />
-        </Form.Group>
-        <Button variant="outline-success" onClick={() => handlePost()} >Salvar</Button>
+        <Button style={{  backgroundColor: 'pink', borderColor: 'pink' }} type="button" onClick={() => handlePost()} >Salvar</Button>
     </Form>
 );
 export default RegisterDragon

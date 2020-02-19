@@ -13,7 +13,7 @@ const Login = () => (
             <Form.Label>Senha:</Form.Label>
             <Form.Control type="password" />
         </Form.Group>
-        <Button className="button-pink">Entrar</Button>
+        <Button style={{ margin: 0 }} className="button-pink">Entrar</Button>
     </Form>
 );
 export default Login

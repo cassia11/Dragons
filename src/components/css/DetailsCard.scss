@@ -1,3 +1,5 @@
+@import './Base';
+
 .title {
     font-size: 30px;
     padding-top: 10px;
@@ -7,13 +9,6 @@
 .form-row {
     padding-top: 16px;
     padding: 20px;
-}
-
-.button-pink {
-    width: 130px;
-    margin: 20px;
-    background-color: pink;
-    border-color: pink;
 }
 
 .align-buttons {

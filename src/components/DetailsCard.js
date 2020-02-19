@@ -25,8 +25,6 @@ const fillField = () => {
     const type = document.getElementById("type-dragon").value;
     data.name = name
     data.type = type
-    console.log(name);
-    console.log(type);
 }
 
 

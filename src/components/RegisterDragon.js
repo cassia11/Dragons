@@ -37,7 +37,7 @@ const RegisterDragon = () => (
             <Form.Label>Tipo:</Form.Label>
             <Form.Control type="text" name="type" required />
         </Form.Group>
-        <Button className="button-pink" type="button" onClick={() => handlePost()} >Salvar</Button>
+        <Button className="button-pink" type="button" href="/dragons" onClick={() => handlePost()} >Salvar</Button>
     </Form>
 );
 export default RegisterDragon

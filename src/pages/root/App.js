@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navbar, Nav, Button, Form } from 'react-bootstrap'
 import Login from '../../components/Login'
 import DetailsPage from '../dragons/DetailsPage'
+import { MDBContainer} from "mdbreact";
+
 
 function App() {
   return (
@@ -41,6 +43,11 @@ function App() {
         <Route exact path='/login' component={Login} />
         <Route path='/dragons/:id' component={DetailsPage} />
       </Switch>
+      <div style={{ backgroundColor: 'pink'}} className="footer-copyright text-center py-3">
+        <MDBContainer fluid >
+          &copy; {new Date().getFullYear()} Copyright: Cássia Gomes
+        </MDBContainer>
+      </div>
     </div>
   )
 }

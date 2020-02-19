@@ -1,9 +1,9 @@
 import axios from '../../configs/api'
 import React, { Component } from 'react'
-import CardDragons from '../../components/ListCard'
-import Loading from '../../components/Loading';
+import Loading from '../../components/Loading'
+import CardDragons from '../../components/dragons/ListCard'
 
-const arraySort = require('array-sort');
+const arraySort = require('array-sort')
 
 export default class ListPage extends Component {
   constructor(props) {
@@ -19,16 +19,16 @@ export default class ListPage extends Component {
   componentDidMount() {
     axios.get()
       .then(res => {
-        const dragons = arraySort(res.data, ['name', 'id']);
-        this.setState({ dragons: dragons });
-        this.setState({ isLoading: false });
+        const dragons = arraySort(res.data, ['name', 'id'])
+        this.setState({ dragons: dragons })
+        this.setState({ isLoading: false })
       })
   }
 
   render() {
-    const dragonList = (this.state.dragons.map((dragon, key) => <CardDragons dragon={dragon} key={key} />));
-    const loadingMessage = <div style={{ marginLeft: '500px', paddingTop: '250px' }}><Loading color='pink' type='spin' /></div>;
-    return (this.state.isLoading ? loadingMessage : dragonList);
+    const dragonList = (this.state.dragons.map((dragon, key) => <CardDragons dragon={dragon} key={key} />))
+    const loadingMessage = <Loading color='pink' type='spin' />
+    return (this.state.isLoading ? loadingMessage : dragonList)
   }
 
 }

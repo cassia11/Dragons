@@ -1,6 +1,6 @@
 import React from 'react'
-import './css/DetailsCard.scss'
-import axios from '../configs/api'
+import '../css/DetailsCard.scss'
+import axios from '../../configs/api'
 import { Form, Col, Button } from 'react-bootstrap'
 
 const data = {
@@ -13,7 +13,7 @@ const handleSubmit = (idDragon, event) => {
     try {
         axios.put(`/${idDragon}`, data)
             .then(res => {
-                window.location = "/dragons";
+                window.location = "/dragons"
             })
     } catch (err) {
         console.log(`😱 Axios request failed: ${err}`)
@@ -50,7 +50,7 @@ const DetailsCard = ({ dragon }, key) => (
             <Form.Row>
                 <Col className="align-buttons">
                     <a href="/dragons">
-                        <Button className="button-pink" type="button">Voltar </Button>
+                        <Button className="button-pink" type="button">Cancelar</Button>
                     </a>
                     <Button className="button-pink" type="button" onClick={(event) => handleSubmit(dragon.id, event)}>Atualizar</Button>
                 </Col>

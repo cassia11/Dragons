@@ -6,14 +6,15 @@ import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
 require('dotenv').config({
-    path: process.env.NODE_ENV === "development" ? ".env.testing" : ".env"
-  })
+    path: process.env.NODE_ENV === "development" ? ".env" : ".env.prd"
+})
+console.log(process.env.NODE_ENV)
 console.log(process.env.APP_NAME)
 console.log(process.env.ENVIROMENT)
 
 ReactDOM.render(
     <BrowserRouter>
-        <App/>
+        <App />
     </BrowserRouter>,
     document.getElementById('root')
 );

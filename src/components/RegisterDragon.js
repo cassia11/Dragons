@@ -13,7 +13,7 @@ const handlePost = () => {
     try {
         axios.post('', data)
             .then(res => {
-                console.log(res)
+                window.location = "/dragons";
             })
     } catch (err) {
         console.log(`😱 Axios request failed: ${err}`)
@@ -37,7 +37,7 @@ const RegisterDragon = () => (
             <Form.Label>Tipo:</Form.Label>
             <Form.Control type="text" name="type" required />
         </Form.Group>
-        <Button className="button-pink" type="button" onClick={() => handlePost()} >Salvar</Button>
+        <Button style={{ margin: 0 }} className="button-pink" type="button" onClick={() => handlePost()} >Salvar</Button>
     </Form>
 );
 export default RegisterDragon

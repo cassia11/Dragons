@@ -27,7 +27,7 @@ export default class ListPage extends Component {
 
   render() {
     const dragonList = (this.state.dragons.map((dragon, key) => <CardDragons dragon={dragon} key={key} />));
-    const loadingMessage = <Loading color='pink' type='spin'/>;
+    const loadingMessage = <div style={{ marginLeft: '500px', paddingTop: '250px' }}><Loading color='pink' type='spin' /></div>;
     return (this.state.isLoading ? loadingMessage : dragonList);
   }
 

@@ -35,7 +35,7 @@ const Routes = () => (
 );
 
 const Footer = () => (
-  <div style={{ backgroundColor: 'pink' }} className="footer-copyright text-center py-3">
+  <div style={{ backgroundColor: 'pink', marginTop: '300px' }} className="footer-copyright text-center py-3">
     <MDBContainer fluid >
       &copy; {new Date().getFullYear()} Copyright: Cássia Gomes
         </MDBContainer>
@@ -69,7 +69,7 @@ function App() {
       </Navbar>
       {Routes()}
       {Footer()}
-    </div>
+    </div >
   )
 }
 

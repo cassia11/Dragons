@@ -24,7 +24,7 @@ export default class DetailsPage extends Component {
 
     render() {
         const dragonDetails = <DetailsCard dragon={this.state.dragon} />;
-        const loadingMessage = <Loading color='pink' type='spin'/>;
+        const loadingMessage = <div style={{ marginLeft: '500px', paddingTop: '250px' }}><Loading color='pink' type='spin' /></div> ;
         return (this.state.isLoading ? loadingMessage : dragonDetails);
     }
 }

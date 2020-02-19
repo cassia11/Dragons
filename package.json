@@ -21,6 +21,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "dotenv": "^8.2.0",
+    "mdbreact": "^4.25.2",
     "next-routes": "^1.4.2",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",

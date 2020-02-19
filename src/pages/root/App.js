@@ -43,7 +43,7 @@ function App() {
         <Route exact path='/login' component={Login} />
         <Route path='/dragons/:id' component={DetailsPage} />
       </Switch>
-      <div style={{ backgroundColor: 'pink'}} className="footer-copyright text-center py-3">
+      <div style={{ backgroundColor: 'pink', marginTop: '300px'}} className="footer-copyright text-center py-3">
         <MDBContainer fluid >
           &copy; {new Date().getFullYear()} Copyright: Cássia Gomes
         </MDBContainer>

@@ -1,68 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dragons
 
-## Available Scripts
+----
 
-In the project directory, you can run:
+Sicredi's challenge - Gerenciamento de dragões
+(Esse projeto foi inicializado com Create React App.)
 
-### `npm start`
+Clique aqui para saber mais sobre Create React App [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+----
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<img src='https://img.shields.io/github/tag/cassia11/dragons.svg' alt='latest semver version' /> 
+<img src='https://img.shields.io/github/issues/cassia11/dragons.svg' alt='open issues badge' />
+<img src='https://img.shields.io/github/issues-pr/cassia11/dragons.svg' alt='open pull requests badge' />
 
-### `npm test`
+## Dependências
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O que você precisa para instalar o software e como instalá-lo:
 
-### `npm run build`
+- [React](https://pt-br.reactjs.org/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Git SCM](https://git-scm.com/download/linux)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+----
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Após instalar e configurar as dependências, para executar o projeto faça os seguintes passos:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Abra um terminal e rode este comando para baixar o projeto:
 
-### `npm run eject`
+```sh
+git clone https://github.com/cassia11/dragons.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Entre na pasta do projeto:
+```sh
+cd ./dragons
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Dentro da pasta do projeto rode este comando para instalar as dependências
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+npm i ou yarn i
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## E para rodar a aplicação:
 
-## Learn More
+1. Esteja dentro da pasta do projeto e rode este comando:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+npm start or yarn start
+```
+Obs: O projeto será executado no modo de desenvolvimento.
+Abra http://localhost:3000 para visualizá-lo no navegador.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+A página será recarregada se você fizer edições.
+Você também verá quaisquer erros de lint no console.
 
-### Code Splitting
+----
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Autora
 
-### Analyzing the Bundle Size
+**Cássia da Silva Gomes** 
+[GitHub Cássia Gomes](https://github.com/cassia11)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
